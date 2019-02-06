@@ -6,9 +6,10 @@ function getRepositories(){
     req.send();
 }
 
-function displayRepositories(event, data){
+function displayRepositories(event){
 	var repos = JSON.parse(this.responseText);
-	const repoList = `<ul>${repos.map(r => {
+	console.log(repos);
+/*	const repoList = `<ul>${repos.map(r => {
                     const repoName = r.name;
                     const url = r.url;
                     const list = '<li>'   + repoName
@@ -18,5 +19,5 @@ function displayRepositories(event, data){
                     console.log(list)
                     return list
     document.getElementById('repositories').innerHTML = repoList;
-    })
+    })*/
 }
